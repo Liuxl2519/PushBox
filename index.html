@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="css/style.css" rel="stylesheet" type="text/css"/>
+	<!--
+    	作者：1528898417@qq.com
+    	时间：2019-07-15
+    	描述：引入粒子背景动画css
+    -->
+	<link href="bg_css/bg_body.css" rel="stylesheet" type="text/css" />
+	<title>Push The Box</title>
+</head>
+
+<body onkeydown="doKeyDown(event)">
+	<div class="container">
+		<canvas id="mycanvas" width="600" height="600"></canvas>
+	</div>
+	<div id="choose">
+		<div id="chooseRoles">
+			<div id="chooseRoleText">角色选择</div>
+			<img src="images/downgirl.png" id="downgirl" />
+			<img src="images/downboy.png"  id="downboy"/>
+			<input type="radio" name="chooseRole" value="girl" id="girl" class="radio" checked/><span class="radio1">Girl</span>
+			<input type="radio" name="chooseRole" value="boy" id="boy" class="radio"><span class="radio1">Boy</span>
+		</div>
+		<div id="chooseLevels">
+			<div id="chooseLevelText">难度选择</div>
+			<input type="radio" name="chooseLevel" value="simple" class="chooseLevel" checked/><span class="radio1">简&nbsp;&nbsp;单</span>
+			<input type="radio" name="chooseLevel" value="medium" class="chooseLevel" ><span class="radio1">中&nbsp;&nbsp;等</span>
+			<input type="radio" name="chooseLevel" value="difficult" class="chooseLevel" ><span class="radio1">困&nbsp;&nbsp;难</span>
+		</div>
+	</div>
+	<div class="buttons">	
+		<button class="button orange" id="startButton">游戏开始</button>
+		<button class="button orange" id="ruleButton">游戏规则</button>
+		<button id="startButton1"></button>
+		<button id="animate"></button>
+		<button id="home"></button>
+	</div>	
+	<div id="current">
+		<!--<audio id="audioBg" controls="controls" loop="true" preload="auto" hidden="true"  src="music/welcome.mp3">
+	      你的浏览器不支持audio标签
+		</audio>
+		<audio id="audioStart" autoplay="autoplay" controls="controls" loop="true" preload="auto" hidden="true" src="music/start.wav">
+	      你的浏览器不支持audio标签
+		</audio>
+		<audio id="audioSuccess" controls="controls" preload="auto" loop="true" hidden="true" src="music/success.mp3">
+	      你的浏览器不支持audio标签
+		</audio>
+		<audio id="audioFail" controls="controls" preload="auto" loop="true" hidden="true" src="music/fail.mp3">
+	      你的浏览器不支持audio标签
+		</audio>
+		<audio id="audioLucky" controls="controls" preload="auto" loop="true" hidden="true" src="music/lucky.mp3">
+	      你的浏览器不支持audio标签
+		</audio>-->
+		<input type="button" id="musicOnButton"/>
+		<div id="msg1"></div>
+		<img src="images/box2.png" style="margin-left: 30px" />
+		<img src="images/jb.png" style="margin-left: 30px; margin-top: 5px;" />
+		<div id="msg0"></div>		
+		<div id="msg2"></div>
+		<input type="button" value="下一关" id="next" class="currentButton" >
+		<input type="button" value="重玩此关" id="replay" class="currentButton" >
+		<input type="button" value="通过此关" id="jbk5" class="currentButton" >
+		<input type="button" value="随机关卡" id="random" class="currentButton" >
+		<input type="button" value="认输" id="return" class="currentButton" >
+	</div>
+	
+	<!--
+    	作者：1528898417@qq.com
+    	时间：2019-07-15
+    	描述：引入粒子背景动画js
+    -->
+	<canvas class="canvas"></canvas>
+	<script src="bg_js/jquery.min.js" type="text/javascript"></script>
+	<script src="bg_js/particle.js" type="text/javascript" charset="utf-8"></script>
+	<script src="bg_js/particle2.js" type="text/javascript"></script>
+	
+	<script src="js/sprites.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/level.js"></script>
+	<script src="js/random.js"></script>
+	<script src="js/buttonEvent.js"></script>
+	
+</body>
+</html>
